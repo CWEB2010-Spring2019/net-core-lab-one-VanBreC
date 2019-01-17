@@ -14,20 +14,37 @@ namespace lab_one
             string[] questions = { "1. Question", "2. Question", "3. Question", "4. Question", "5. Question",
                 "6. Question", "7. Question", "8. Question", "9. Question", "10. Question" };
 
+            //Question options array
+            string[] questionOptions = {"A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4",
+                "A. Option1      B. Option2     C. Option3     D. Option4" };
+
             //User answers array
             string[] userAnswers = new string[10];
-
+            
             //Test loop to print answers
-            for (int x = 0; x < correctAnswers.Length; ++x)
-                Console.WriteLine("Correct Answers {0}", correctAnswers[x].ToString());
-
-            //Test loop to read user answers
-            for (int x = 0; x < userAnswers.Length; ++x)
+            for (int x = 0; x < 10; ++x)
+            {
+                Console.WriteLine("{0}", questions[x].ToString());
+                Console.WriteLine("{0}", questionOptions[x].ToString());
+                Console.WriteLine();
                 userAnswers[x] = Console.ReadLine().ToUpper();
+                Console.WriteLine();
+            }
+            //Test loop to read user answers
+            //for (int x = 0; x < 10; ++x)
+               // userAnswers[x] = Console.ReadLine().ToUpper();
 
             //Test loop to print user answers
-            for (int x = 0; x < userAnswers.Length; ++x)
-                Console.WriteLine("User Answers {0}", userAnswers[x].ToString());
+            //for (int x = 0; x < 10; ++x)
+                //Console.WriteLine("User Answers {0}", userAnswers[x].ToString());
         }
 
     }
