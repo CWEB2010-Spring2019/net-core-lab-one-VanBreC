@@ -7,6 +7,9 @@ namespace lab_one
     {
         static void Main()
         {
+            //Score
+            int score = 100;
+
             //Correct answers array
             string[] correctAnswers = { "B", "B", "C", "A", "D", "A", "A", "C", "D", "A" };
 
@@ -36,6 +39,8 @@ namespace lab_one
                 Console.WriteLine("{0}", questionOptions[x].ToString());
                 Console.WriteLine();
                 userAnswers[x] = Console.ReadLine().ToUpper();
+                if(userAnswers[x] != correctAnswers[x])
+                    int.score - 10;
                 Console.WriteLine();
             }
             //Test loop to read user answers
