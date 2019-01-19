@@ -7,8 +7,11 @@ namespace lab_one
     {
         static void Main()
         {
-            //Wrong answers array
-            string[] wrongAnswers = { };
+            //Right answers list
+            List<string> correct = new List<string>();
+
+            //Wrong answers list
+            List<string> wrong = new List<string>();
 
             //Correct answers array
             string[] correctAnswers = { "B", "B", "C", "A", "D", "A", "A", "C", "D", "A" };
@@ -39,10 +42,14 @@ namespace lab_one
                 Console.WriteLine("{0}", questionOptions[x].ToString());
                 Console.WriteLine();
                 userAnswers[x] = Console.ReadLine().ToUpper();
-                if (userAnswers[x] != correctAnswers[x])
-                    wrongAnswers.Add(x);
+                if (userAnswers[x] == correctAnswers[x])
+                    correct.Add(userAnswers[x]);
+                else
+                    wrong.Add("Question: " + (x + 1) + ") " + userAnswers[x]);
+                
                 Console.WriteLine();
             }
+            Console.WriteLine("You answered " + correct.Count + " out of " + questions.Length);
             //Test loop to read user answers
             //for (int x = 0; x < 10; ++x)
                // userAnswers[x] = Console.ReadLine().ToUpper();
