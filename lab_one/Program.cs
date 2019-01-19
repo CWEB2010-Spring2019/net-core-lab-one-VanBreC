@@ -49,18 +49,16 @@ namespace lab_one
                 
                 Console.WriteLine();
             }
+
+
             Console.WriteLine("You answered " + correct.Count + " out of " + questions.Length + " correctly");
+
+
             if (correct.Count >= 7)
                 Console.WriteLine("You Passed The Assessment");
             else
                 Console.WriteLine("You Didnt Pass");
-            //Test loop to read user answers
-            //for (int x = 0; x < 10; ++x)
-               // userAnswers[x] = Console.ReadLine().ToUpper();
-
-            //Test loop to print user answers
-            //for (int x = 0; x < 10; ++x)
-                //Console.WriteLine("User Answers {0}", userAnswers[x].ToString());
+            
         }
 
     }
