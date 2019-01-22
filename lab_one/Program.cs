@@ -7,6 +7,31 @@ namespace lab_one
     {
         static void Main()
         {
+            //message for user to start quiz
+            Console.WriteLine("Press the 'Enter' key to start the quiz");
+
+            //User must hit enter to start quiz
+            bool start = false;
+            while (!start)
+            {
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                if (keyInfo.Key == ConsoleKey.Enter)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Starting Quiz");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    start = true;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Wrong key input, please press 'Enter' to start.");
+                }
+            }
+            
+
             //Right answers list
             List<string> correct = new List<string>();
 
