@@ -34,32 +34,53 @@ namespace lab_one
 
             //User answers array
             string[] userAnswers = new string[10];
-            
-            //Test loop to print answers
-            for (int x = 0; x < 10; ++x)
+
+
+            bool done = false;
+            while (!done)
             {
-                Console.WriteLine("{0}", questions[x].ToString());
-                Console.WriteLine("{0}", questionOptions[x].ToString());
-                Console.WriteLine();
-                userAnswers[x] = Console.ReadLine().ToUpper();
-                if (userAnswers[x] == correctAnswers[x])
-                    correct.Add(userAnswers[x]);
+
+                //Test loop to print answers
+                for (int x = 0; x < 10; ++x)
+                {
+                    Console.WriteLine("{0}", questions[x].ToString());
+                    Console.WriteLine("{0}", questionOptions[x].ToString());
+                    Console.WriteLine();
+                    userAnswers[x] = Console.ReadLine().ToUpper();
+                    if (userAnswers[x] == correctAnswers[x])
+                        correct.Add(userAnswers[x]);
+                    else
+                        wrong.Add("Question: " + (x + 1) + ") " + userAnswers[x]);
+
+                    Console.WriteLine();
+                }
+
+
+                Console.WriteLine("You answered " + correct.Count + " out of " + questions.Length + " correctly");
+
+
+                if (correct.Count >= 7)
+                    Console.WriteLine("You Passed The Assessment");
                 else
-                    wrong.Add("Question: " + (x + 1) + ") " + userAnswers[x]);
-                
+                    Console.WriteLine("You Didnt Pass");
+
+                Console.WriteLine("Enter -1 to retry, otherwise press enter twice to end the program");
                 Console.WriteLine();
+
+                string end = Console.ReadLine();
+
+                if (end != "-1")
+                    done = true;
+                else
+                {
+                    Console.WriteLine("Restarting Test");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
+                }
+
             }
 
-
-            Console.WriteLine("You answered " + correct.Count + " out of " + questions.Length + " correctly");
-
-
-            if (correct.Count >= 7)
-                Console.WriteLine("You Passed The Assessment");
-            else
-                Console.WriteLine("You Didnt Pass");
-            
         }
-
     }
 }
