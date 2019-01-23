@@ -42,13 +42,16 @@ namespace lab_one
             string[] correctAnswers = { "B", "B", "C", "A", "D", "A", "A", "C", "D", "A" };
 
             //Questions array
-            string[] questions = { "1. Question", "2. Question", "3. Question", "4. Question", "5. Question",
-                "6. Question", "7. Question", "8. Question", "9. Question", "10. Question" };
+            string[] questions = { "1. When Was .NET Core 1.0 Released?","2. When Was .NET Core 2.0 Released?",
+                "3. When Was .NET Core 3 announced?", "4. Question",
+                "5. Question","6. Question",
+                "7. Question", "8. Question",
+                "9. Question", "10. Question" };
 
             //Question options array
-            string[] questionOptions = {"A. Option1      B. Option2     C. Option3     D. Option4",
-                "A. Option1      B. Option2     C. Option3     D. Option4",
-                "A. Option1      B. Option2     C. Option3     D. Option4",
+            string[] questionOptions = {"A. July 27th 2016      B. June 27th 2016     C. July 26th 2010     D. June 25th 2007",
+                "A. September 15th 2017      B. August 14th 2017     C. November 16th 2016     D. August 15th 2017",
+                "A. May 8th 2018      B. April 7th 2018     C. May 7th 2018     D. December 8th 2017",
                 "A. Option1      B. Option2     C. Option3     D. Option4",
                 "A. Option1      B. Option2     C. Option3     D. Option4",
                 "A. Option1      B. Option2     C. Option3     D. Option4",
